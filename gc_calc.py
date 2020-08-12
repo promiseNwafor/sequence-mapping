@@ -13,12 +13,13 @@ def nucleotide_count(sequence):
 
 # calculate the GC content
 def GC_content(codes):
-    total_code = sum(codes.values())
-    total_gc = sum([codes["G"], codes["C"]])
+    code_obj = nucleotide_count(codes)
+    total_code = sum(code_obj.values())
+    total_gc = sum([code_obj["G"], code_obj["C"]])
     gc_content = total_gc / total_code
     print(gc_content)
 
 
-GC_content(nucleotide_count(f))
+GC_content(f)
 
 f.close()
