@@ -17,9 +17,9 @@ def GC_content(codes):
     total_code = sum(code_obj.values())
     total_gc = sum([code_obj["G"], code_obj["C"]])
     gc_content = total_gc / total_code
-    print(gc_content)
+    return gc_content
 
 
-GC_content(f)
+print(GC_content(f))
 
 f.close()
